@@ -20,7 +20,6 @@ public class Car {
     private Currency priceMonth;
     private String rate;
 
-
     public int getId() {
         return id;
     }
