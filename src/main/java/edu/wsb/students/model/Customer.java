@@ -97,6 +97,7 @@ public class Customer {
     }
 
     public void setDrivingLicenceExpirationDate(LocalDate drivingLicenceExpirationDate) {
+        //test
         this.drivingLicenceExpirationDate = drivingLicenceExpirationDate;
     }
 
