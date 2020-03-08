@@ -1,16 +1,39 @@
 package edu.wsb.students.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "Customer")
 public class Customer {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
+    private int id;
+
+    @Column(name ="name")
     private String name;
+
+    @Column(name = "document_id")
     private String documentId;
+
+    @Column(name = "document_expiration_date")
     private LocalDate documentExpirationDate;
+
+    @Column(name = "driving_licnce_id")
     private String drivingLicenceId;
+
+    @Column(name = "driving_licence_expiration_date")
     private LocalDate drivingLicenceExpirationDate;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    @Column(name = "adress")
     private String adress;
+
+    @Column(name = "phone_number")
     private int phoneNumber;
 
     public LocalDate getBirthDate() {
@@ -76,4 +99,5 @@ public class Customer {
     public void setDrivingLicenceExpirationDate(LocalDate drivingLicenceExpirationDate) {
         this.drivingLicenceExpirationDate = drivingLicenceExpirationDate;
     }
+
 }
