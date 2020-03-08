@@ -11,7 +11,7 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id")
+    @Column(name = "id")
     private int id;
 
     @Column(name = "brand")
@@ -32,17 +32,11 @@ public class Car {
     @Column(name = "VIN")
     private String VIN;
 
-    @Column(name = "insurance")
-    private String insurance;
-
     @Column(name = "insuranceDate")
     private LocalDateTime insuraceDate;
 
     @Column(name = "technicalInspection")
     private String technicalInspection;
-
-    @Column(name = "priceMinute")
-    private Currency priceMinute;
 
     @Column(name = "priceDay")
     private Currency priceDay;
@@ -109,14 +103,6 @@ public class Car {
         this.VIN = VIN;
     }
 
-    public String getInsurance() {
-        return insurance;
-    }
-
-    public void setInsurance(String insurance) {
-        this.insurance = insurance;
-    }
-
     public LocalDateTime getInsuraceDate() {
         return insuraceDate;
     }
@@ -131,14 +117,6 @@ public class Car {
 
     public void setTechnicalInspection(String technicalInspection) {
         this.technicalInspection = technicalInspection;
-    }
-
-    public Currency getPriceMinute() {
-        return priceMinute;
-    }
-
-    public void setPriceMinute(Currency priceMinute) {
-        this.priceMinute = priceMinute;
     }
 
     public Currency getPriceDay() {
