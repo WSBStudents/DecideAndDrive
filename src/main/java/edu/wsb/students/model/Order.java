@@ -1,14 +1,30 @@
 package edu.wsb.students.model;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Currency;
 
+@Entity
+@Table(name = "order")
 public class Order {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "rentDate")
     private LocalDateTime rentDate;
+
+    @Column(name = "price")
     private Currency price;
+
+    @ManyToOne
+    @JoinColumn(name = "car_id", unique = true, referencedColumnName = "id")
     private Car rentalCar;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id", unique = true, referencedColumnName = "id")
     private Customer customer;
 
     public int getId() {
