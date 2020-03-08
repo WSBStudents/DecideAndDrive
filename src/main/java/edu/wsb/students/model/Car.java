@@ -1,23 +1,56 @@
 package edu.wsb.students.model;
 
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Currency;
 
+@Entity
+@Table(name = "Car")
 public class Car {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private int id;
+
+    @Column(name = "brand")
     private String brand;
+
+    @Column(name = "model")
     private String model;
+
+    @Column(name = "hp")
     private int hp;
+
+    @Column(name = "engineCapacity")
     private String engineCapacity;
+
+    @Column(name = "prodYear")
     private int prodYear;
+
+    @Column(name = "VIN")
     private String VIN;
+
+    @Column(name = "insurance")
     private String insurance;
+
+    @Column(name = "insuranceDate")
     private LocalDateTime insuraceDate;
+
+    @Column(name = "technicalInspection")
     private String technicalInspection;
+
+    @Column(name = "priceMinute")
     private Currency priceMinute;
+
+    @Column(name = "priceDay")
     private Currency priceDay;
+
+    @Column(name = "priceMonth")
     private Currency priceMonth;
+
+    @Column(name = "rate")
     private String rate;
 
     public int getId() {
@@ -131,4 +164,5 @@ public class Car {
     public void setRate(String rate) {
         this.rate = rate;
     }
+
 }
